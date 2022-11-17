@@ -17,7 +17,7 @@ export default function User({ id, firstname, lastname, active, avatar }) {
         <p>{firstname}</p>
         <p>{lastname}</p>
         <p>{status}</p>
-        <img src={img_erl} alt="avatar" classNam={s.avatar} />
+        <img src={img_erl} alt="avatar" className={s.avatar} />
     </div>
   )
 }
