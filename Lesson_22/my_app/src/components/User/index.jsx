@@ -1,7 +1,8 @@
 import React from 'react'
+import ToDoList from '../ToDoList';
 import s from "./index.module.css"
 
-export default function User({ id, firstname, lastname, active, avatar }) {
+export default function User({ id, firstname, lastname, active, avatar, todo }) {
 
     const status = active ? "active" : "not active";
 
@@ -13,10 +14,11 @@ export default function User({ id, firstname, lastname, active, avatar }) {
 
   return (
     <div className={s.card} style={card_style}>
-        <p>{id}</p>
-        <p>{firstname}</p>
-        <p>{lastname}</p>
-        <p>{status}</p>
+        <p>ID: {id}</p>
+        <p>First name: {firstname}</p>
+        <p>Last name: {lastname}</p>
+        <p>Status: {status}</p>
+        <ToDoList tasks={todo} />
         <img src={img_erl} alt="avatar" className={s.avatar} />
     </div>
   )
