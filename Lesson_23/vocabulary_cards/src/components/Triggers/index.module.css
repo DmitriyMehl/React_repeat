@@ -1,0 +1,10 @@
+.triggers button {
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    margin: 5px;
+    width: 70px;
+}
