@@ -1,7 +1,7 @@
 import React from 'react'
 import s from "./index.module.css"
 
-export default function CardItem({ id, eng, rus, lang }) {
+export default function CardItem({ eng, rus, lang }) {
 
     const text = lang === "rus" ? rus : eng;
 

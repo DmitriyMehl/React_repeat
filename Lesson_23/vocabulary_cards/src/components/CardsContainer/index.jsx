@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import { words } from '../../data/words'
 import CardItem from '../CardItem'
 import s from "./index.module.css"
 import { Context } from '../../context'
