@@ -7,8 +7,10 @@ export default function ToDoList({ tasks }) {
         <p>Tasks: </p>
         {
             tasks 
-            ? tasks.map(el => <ToDoItem key={el.id} {...el} />)
-            : <p>Дел нет</p>
+            ? tasks
+              .sort((a, b) => a.done - b.done)
+              .map(el => <ToDoItem key={el.id} {...el} />)
+              : <p>Дел нет</p>
         }
     </div>
   )
