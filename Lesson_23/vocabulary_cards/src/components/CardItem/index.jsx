@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Context } from '../../context';
 import s from "./index.module.css"
 
-export default function CardItem({ eng, rus, lang }) {
+export default function CardItem({ id, eng, rus, lang }) {
+
+    const { change_lang } = useContext(Context);
 
     const text = lang === "rus" ? rus : eng;
 
@@ -11,7 +14,7 @@ export default function CardItem({ eng, rus, lang }) {
     }
 
   return (
-    <div className={s.card} style={card_style}>
+    <div className={s.card} style={card_style} onClick={() => change_lang(id)}>
         {text}
     </div>
   )

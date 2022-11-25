@@ -27,9 +27,28 @@ function App() {
     )
   }
 
+  const change_lang = (id) => {
+    setCards(cards.map(el => {
+      if(el.id === id){
+        el.lang = el.lang === "rus" ? "eng" : "rus"
+      }
+      return el;
+    }))
+  }
+
+  const add_card = (eng, rus) => setCards([
+    ...cards,
+    {
+      id: Date.now(),
+      eng,
+      rus,
+      lang: "eng"
+    }
+  ]);
+
   return (
     <div>
-      <Context.Provider value={{ cards, change_to_eng, change_to_rus }}>
+      <Context.Provider value={{ cards, change_to_eng, change_to_rus, change_lang, add_card }}>
         <Form/>
         <CardsContainer />
         <Triggers />

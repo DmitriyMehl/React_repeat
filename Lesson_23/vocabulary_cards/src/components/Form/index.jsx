@@ -1,12 +1,24 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Context } from '../../context'
 import s from "./index.module.css"
 
 export default function Form() {
+
+    const { add_card } = useContext(Context);
+
+    const submit = event => {
+        event.preventDefault();
+        const { rus, eng } = event.target;
+        add_card(eng.value, rus.value);
+        rus.value = "";
+        eng.value = "";
+    }
+
   return (
-    <div className={s.form}>
+    <form className={s.form} onSubmit={submit}>
         <input type="text" placeholder='Russian' name='rus' />
-        <input type="text" placeholder='English' name='and' />
+        <input type="text" placeholder='English' name='eng' />
         <button>Add</button>
-    </div>
+    </form>
   )
 }
