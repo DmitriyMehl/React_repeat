@@ -5,12 +5,12 @@ import { Context } from '../../context'
 
 export default function CardsContainer() {
 
-  const { words } = useContext(Context);
+  const { cards } = useContext(Context);
 
   return (
     <div className={s.cards_container}>
         {
-          words.map(el => <CardItem key={el.id} {...el} />)
+          cards.map(el => <CardItem key={el.id} {...el} />)
         }
     </div>
   )
