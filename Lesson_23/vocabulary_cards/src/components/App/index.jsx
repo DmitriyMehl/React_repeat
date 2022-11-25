@@ -3,6 +3,7 @@ import CardsContainer from "../CardsContainer";
 import { Context } from "../../context"
 import Triggers from "../Triggers";
 import { useState } from "react"
+import Form from "../Form";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
   return (
     <div>
       <Context.Provider value={{ cards, change_to_eng, change_to_rus }}>
+        <Form/>
         <CardsContainer />
         <Triggers />
       </Context.Provider>
