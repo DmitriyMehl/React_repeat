@@ -1,15 +1,14 @@
 import "../../style.css"
-import { Context } from "../../context";
 import Navbar from "../Navbar";
 import Services from "../Services";
+import AboutUs from "../AboutUs";
 
 function App() {
   return (
     <div>
-      <Context.Provider value={{  }}>
         <Navbar/>
         <Services/>
-      </Context.Provider>
+        <AboutUs/>
     </div>
   );
 }
