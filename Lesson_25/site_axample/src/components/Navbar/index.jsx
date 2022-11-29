@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from "./media/Group1.png"
 import s from "./index.module.css"
+import { MenuOutlined } from "@ant-design/icons"
 
 export default function Navbar() {
   return (
@@ -15,6 +16,7 @@ export default function Navbar() {
             <li>O компании</li>
             <li>Kонтакты</li>
         </ul>
+        <MenuOutlined className={s.menu_icon} />
     </nav>
   )
 }
